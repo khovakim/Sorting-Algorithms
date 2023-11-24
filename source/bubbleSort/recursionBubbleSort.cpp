@@ -21,5 +21,5 @@ void recursionBubbleSort(int arr[], int size)
         return ;
     }
 
-    recursionBubbleSort(arr[], szie - 1);
+    recursionBubbleSort(arr, size - 1);
 }
