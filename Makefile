@@ -4,7 +4,7 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -Wall -Wextra -Werror -std=c++17 -g3 -fsanitize=address
 
 # Source directory
 SRC_DIR = source
