@@ -1,6 +1,6 @@
 #include "utils.h"
 
-const int MAX_NUMBER_IN_ARR = 151;
+const int MAX_NUMBER_IN_ARR = 1501;
 
 void inputArray(int arr[], int size)
 {

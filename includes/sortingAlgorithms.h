@@ -4,4 +4,6 @@
 void bubbleSort(int arr[], int size);
 void recursionBubbleSort(int arr[], int size);
 
+void insertionSort(int arr[], int size);
+
 #endif   // __SORTINGALGORITHMS_H__

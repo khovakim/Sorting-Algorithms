@@ -1,6 +1,6 @@
 void bubbleSort(int arr[], int size)
 {
-    bool swapped;
+	bool swapped;
 
     for (int i = 0; i < size; ++i) {
         swapped = false;
