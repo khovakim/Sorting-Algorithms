@@ -6,11 +6,11 @@
 #include "utils.h"
 #include "sortingAlgorithms.h"
 
-//const int SIZE = 10;
+// const int SIZE = 10;
 const int SIZE = 100;
-//const int SIZE = 1000;
-//const int SIZE = 10000;
-//const int SIZE = 100000;
+// const int SIZE = 1000;
+// const int SIZE = 10000;
+// const int SIZE = 100000;
 
 typedef void (*Sort)(int[], int);
 
@@ -23,22 +23,20 @@ static void test(const char* message, Sort mySort)
 	struct timespec end;
 
 	inputArray(arr, SIZE);
-	std::cout << "Unsorted array :" << std::endl;
+	std::cout << "Unsorted array :" << std::endl << std::endl;
 	printArray(arr, SIZE);
+	std::cout << std::endl;
 
-	// auto begin = std::chrono::high_resolution_clock::now();
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
 	mySort(arr, SIZE);
 	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end);
-	// auto end = std::chrono::high_resolution_clock::now();
 
-	long seconds = end.tv_sec - start.tv_sec;
-	long nanoseconds = end.tv_nsec - start.tv_nsec;
-	double elapsed = seconds + (nanoseconds * 1e-9);
+	long   nanoseconds = end.tv_nsec - start.tv_nsec;
+	long   seconds     = end.tv_sec - start.tv_sec;
+	double elapsed     = seconds + (nanoseconds * 1e-9);
 
-	// auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
 
-	std::cout << "Sorted array :" << std::endl;
+	std::cout << "Sorted array :" << std::endl << std::endl;
 	printArray(arr, SIZE);
 	std::cout << "Time taken by program is : "
 			<< std::fixed << std::setprecision(10) << elapsed
@@ -52,8 +50,9 @@ static void test(const char* message, Sort mySort)
 int main()
 {
 	test("Sorting by -> Bubble Sort", bubbleSort);
-	test("Sorting by -> Recursion Bubble Sort", recursionBubbleSort);
+	test("Sorting by -> Recursive Bubble Sort", recursiveBubbleSort);
 	test("Sorting by -> Insertion Sort", insertionSort);
+	test("Sorting by -> Recursive Insertion Sort", recursiveInsertionSort);
 
 	return 0;
 }

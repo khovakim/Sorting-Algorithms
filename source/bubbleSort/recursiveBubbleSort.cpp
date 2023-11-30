@@ -1,4 +1,4 @@
-void recursionBubbleSort(int arr[], int size)
+void recursiveBubbleSort(int arr[], int size)
 {
     if (size == 1) {
         return ;
@@ -21,5 +21,5 @@ void recursionBubbleSort(int arr[], int size)
         return ;
     }
 
-    recursionBubbleSort(arr, size - 1);
+    recursiveBubbleSort(arr, size - 1);
 }
