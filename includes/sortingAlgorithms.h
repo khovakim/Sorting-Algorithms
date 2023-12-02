@@ -7,4 +7,8 @@ void recursiveBubbleSort(int arr[], int size);
 void insertionSort(int arr[], int size);
 void recursiveInsertionSort(int arr[], int size);
 
+void selectionSort(int arr[], int size);
+void recursiveSelectionSort(int arr[], int size, int index = 0);
+
+
 #endif   // __SORTINGALGORITHMS_H__
