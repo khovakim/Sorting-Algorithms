@@ -15,7 +15,6 @@ const int SIZE = 100;
 typedef void (*Sort)(int[], int);
 
 //	static void test(const char* message, void (*mySort)(int[], int))
-
 static void test(const char* message, Sort mySort)
 {
 	int             arr[SIZE]{};
@@ -79,6 +78,7 @@ int main()
 	test("Sorting by -> Recursive Insertion Sort", recursiveInsertionSort);
 	test("Sorting by -> Selection Sort", selectionSort);
 	test("Sorting by -> Recursive Selection Sort", recursiveSelectionSort, 0);
+	test("Sorting by -> Radix Sort", radixSort);
 
 	return 0;
 }
