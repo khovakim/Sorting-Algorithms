@@ -10,7 +10,7 @@ _WHITE=	\033[1;37m
 _NC=	\033[0m
 
 # Colored messages
-SUCCESS=$(GREEN)SUCCESS$(NC)
+SUCCESS=$(_GREEN)SUCCESS$(NC)
 COMPILING=$(_BLUE)COMPILING$(NC)
 
 # Makefile for C++ project
@@ -55,11 +55,11 @@ $(TARGET): $(OBJ)
 	@echo "-----\nCreating Binary File $(_YELLOW)$@$(_WHITE) ... \c"
 	@$(CXX) $(CXXFLAGS) -o $@ $^
 	@mv $(TARGET) $(BIN)/
-	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
+	@echo "$(SUCCESS)\n-----"
 
 # Rule to build object files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp Makefile
-	@echo "Compiling $(_YELLOW)$@$(_WHITE) ... \c"
+	@echo "$(COMPILING) $(_YELLOW)$@$(_WHITE) ... \c"
 	@mkdir -p $(dir $@)
 	@$(CXX) $(CXXFLAGS) $(IFLAGS) -c $< -o $@
 	@echo "$(_GREEN)DONE$(_WHITE)"
