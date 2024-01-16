@@ -109,6 +109,7 @@ int main()
 	test("Sorting by -> Recursive Selection Sort", recursiveSelectionSort, 0);
 	test("Sorting by -> Radix Sort", radixSort);
 	test("Sorting by -> Merge Sort", mergeSort);
+	test("Sorting by -> Merge Sort", quickSort);
 
 	return 0;
 }

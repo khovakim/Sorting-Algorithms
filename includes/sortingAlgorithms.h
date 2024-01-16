@@ -13,5 +13,6 @@ void recursiveSelectionSort(int arr[], const int size, int index = 0);
 void radixSort(int arr[], const int size);
 
 void mergeSort(int arr[], const int begin, const int end);
+void quickSort(int arr[], const int begin, const int end);
 
 #endif   // __SORTINGALGORITHMS_H__
